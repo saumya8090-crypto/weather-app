@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Weather App</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script></head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <h2>Weather App</h2>
+
+    <div class="toggle-container">
+      <span class="toggle-label">Dark Mode</span>
+      <label class="switch">
+        <input type="checkbox" id="themeToggle">
+        <span class="slider"></span>
+      </label>
+    </div>
+  </div>
+
+  <!-- Main Card -->
+  <div class="card">
+    <input type="text" id="search" placeholder="Enter city...">
+    <button onclick="getWeather()">Search</button>
+
+    <h2 id="city">--</h2>
+
+    <img id="icon" src="" alt="" width="80">
+
+    <h1 id="temp">--</h1>
+    <p id="desc">--</p>
+  </div>
+
+  <!-- Forecast -->
+  <div id="forecast" class="forecast"></div>
+
+  <!-- Chart -->
+  <canvas id="tempChart"></canvas>
+
+  <script src="script.js"></script>
+</body>
+</html>

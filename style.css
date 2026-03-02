@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #222;
+  transition: 0.3s;
+}
+
+/* Top Bar */
+.top-bar {
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+/* Toggle */
+.toggle-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Switch */
+.switch {
+  position: relative;
+  width: 50px;
+  height: 24px;
+}
+
+.switch input {
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  inset: 0;
+  background: #ddd;
+  border-radius: 20px;
+}
+
+.slider:before {
+  content: "";
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  left: 2px;
+  bottom: 2px;
+  background: white;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+input:checked + .slider {
+  background: #333;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+/* Card */
+.card {
+  backdrop-filter: blur(15px);
+  background: rgba(255,255,255,0.25);
+  border-radius: 20px;
+  padding: 25px;
+  width: 320px;
+  text-align: center;
+  margin: 20px;
+}
+
+/* Input */
+input {
+  padding: 12px;
+  width: 65%;
+  border-radius: 12px;
+  border: none;
+}
+
+/* Button */
+button {
+  padding: 12px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #007BFF, #00c6ff);
+  color: white;
+  cursor: pointer;
+}
+
+/* Forecast */
+.forecast {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.day {
+  background: rgba(255,255,255,0.25);
+  padding: 10px;
+  border-radius: 12px;
+  width: 100px;
+  text-align: center;
+}
+
+/* Chart */
+canvas {
+  max-width: 600px;
+  margin: 20px;
+}
+
+/* Dark Mode */
+.dark {
+  background: linear-gradient(135deg, #141e30, #243b55);
+  color: white;
+}
+
+.dark .card,
+.dark .day {
+  background: rgba(0,0,0,0.4);
+}
