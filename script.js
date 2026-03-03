@@ -1,4 +1,4 @@
-const apiKey = "3abd9f7c3654308ebbac25632220b966";
+const apiKey = "Your_API_key";
 let tempChart;
 
 /* SEARCH */
