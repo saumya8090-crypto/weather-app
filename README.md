@@ -4,4 +4,4 @@ Create a free account at https://openweathermap.org/api
 Generate your API key
 Open the script.js file
 Replace the placeholder with your key:
-const apiKey = "YOUR_API_KEY_HERE";
+const apiKey = "Your_API_Key";
